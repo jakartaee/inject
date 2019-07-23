@@ -1,0 +1,114 @@
+<project>
+  <parent>
+    <groupId>org.eclipse.ee4j</groupId>
+    <artifactId>project</artifactId>
+    <version>1.0.5</version>
+    <relativePath/>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jakarta.inject</groupId>
+  <artifactId>inject-api</artifactId>
+  <packaging>jar</packaging>
+  <name>Jakarta Dependency Injection</name>
+  <version>1</version>
+  <description>Jakarta Dependency Injection</description>
+  <url>https://github.com/eclipse-ee4j/injection-api</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:ssh://git@github.com/eclipse-ee4j/injection-api.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/eclipse-ee4j/injection-api.git</developerConnection>
+    <url>https://github.com/eclipse-ee4j/injection-api</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <developers>
+    <developer>
+      <name>Antoine Sabot-Durand</name>
+      <id>asabotdu</id>
+      <timezone>CET</timezone>
+      <organization>Red Hat Inc.</organization>
+      <roles>
+        <role>Specfication Lead</role>
+      </roles>
+      <email>asd[at]redhat[dot]com</email>
+    </developer>
+
+    <developer>
+      <name>Martin Kouba</name>
+      <id>mkouba</id>
+      <organization>Red Hat Inc.</organization>
+      <roles>
+        <role>RI tech lead</role>
+      </roles>
+      <email>mkouba[at]redhat[dot]com</email>
+    </developer>
+
+    <developer>
+      <name>Tomas Remes</name>
+      <id>tremes</id>
+      <organization>Red Hat Inc.</organization>
+      <roles>
+        <role>TCK tech lead</role>
+      </roles>
+      <email>tremes[at]redhat[dot]com</email>
+    </developer>
+
+    <developer>
+      <name>Matej Novotny</name>
+      <id>manovotn</id>
+      <organization>Red Hat Inc.</organization>
+      <roles>
+        <role>TCK and RI developer</role>
+      </roles>
+      <email>manovotn[at]redhat[dot]com</email>
+    </developer>
+  </developers>
+
+  <properties>
+    <packages.export>javax.inject.*</packages.export>
+    <spec_version>1.1</spec_version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <docfilessubdirs>true</docfilessubdirs>
+          <description>Jakarta Dependency Injection API</description>
+          <doctitle>Jakarta Dependency Injection API</doctitle>
+          <windowtitle>Jakarta Dependency Injection API</windowtitle>
+          <header><![CDATA[<br>Jakarta Dependency Injection ${project.version}]]>
+          </header>
+          <bottom><![CDATA[
+Comments to: <a href="mailto:cdi-dev@eclipse.org">cdi-dev@eclipse.org</a>.<br>
+Copyright &#169; 2019;{currentYear} Red Hat and/or its affiliates. All rights reserved.<br>
+Use is subject to <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
+          </bottom>
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
