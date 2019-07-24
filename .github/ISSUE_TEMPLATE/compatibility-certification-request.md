@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-- [ ] Statement of Acceptance of the terms of the EFTL
-  // Add here
 - [ ] Product Name, Version and download URL (if applicable)
   // Add here
 - [ ] Specification Name, Version and download URL
@@ -25,5 +23,5 @@ assignees: ''
   // Add here
 - [ ] Summary of the information for the certification environment, operating system, cloud, ...
   // Add here
-- [ ] A statement attesting that all TCK requirements have been met, including any compatibility rules
-  // Add here
+- [ ] By checking this box I acknowledge that I accept the terms of the [EFTL](https://www.eclipse.org/legal/tck.php).
+- [ ] By checking this box I attest that all TCK requirements have been met, including any compatibility rules.
