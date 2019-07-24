@@ -8,7 +8,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>jakarta.inject</groupId>
-  <artifactId>inject-api</artifactId>
+  <artifactId>jakarta.inject-api</artifactId>
   <packaging>jar</packaging>
   <name>Jakarta Dependency Injection</name>
   <version>1</version>
