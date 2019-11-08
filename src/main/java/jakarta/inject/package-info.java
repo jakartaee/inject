@@ -152,4 +152,4 @@
  *
  * @see javax.inject.Inject @Inject
  */
-package javax.inject;
+package jakarta.inject;

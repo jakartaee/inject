@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package javax.inject;
+package jakarta.inject;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
@@ -50,7 +50,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
  *     public enum Color { RED, BLACK, TAN }
  *   }</pre>
  *
- * @see javax.inject.Named @Named
+ * @see jakarta.inject.Named @Named
  */
 @Target(ANNOTATION_TYPE)
 @Retention(RUNTIME)

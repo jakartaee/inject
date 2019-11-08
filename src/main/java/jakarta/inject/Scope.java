@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package javax.inject;
+package jakarta.inject;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
@@ -71,7 +71,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
  * forgot to configure the scope in the injector. A conservative injector
  * would generate an error rather than not apply a scope.
  *
- * @see javax.inject.Singleton @Singleton
+ * @see jakarta.inject.Singleton @Singleton
  */
 @Target(ANNOTATION_TYPE)
 @Retention(RUNTIME)
