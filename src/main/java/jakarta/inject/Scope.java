@@ -63,7 +63,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
  * <pre>
  *   &#064;java.lang.annotation.Documented
  *   &#064;java.lang.annotation.Retention(RUNTIME)
- *   &#064;javax.inject.Scope
+ *   &#064;jakarta.inject.Scope
  *   public @interface RequestScoped {}</pre>
  *
  * <p>Annotating scope annotations with {@code @Scope} helps the injector
