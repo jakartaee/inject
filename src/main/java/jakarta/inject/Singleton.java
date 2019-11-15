@@ -14,31 +14,18 @@
  * limitations under the License.
  */
 
-package javax.inject;
+package jakarta.inject;
 
-import java.lang.annotation.Retention;
 import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * String-based {@linkplain Qualifier qualifier}.
+ * Identifies a type that the injector only instantiates once. Not inherited.
  *
- * <p>Example usage:
- *
- * <pre>
- *   public class Car {
- *     &#064;Inject <b>@Named("driver")</b> Seat driverSeat;
- *     &#064;Inject <b>@Named("passenger")</b> Seat passengerSeat;
- *     ...
- *   }</pre>
+ * @see Scope @Scope
  */
-@Qualifier
+@Scope
 @Documented
 @Retention(RUNTIME)
-public @interface Named {
-
-    /** The name.
-     * @return the name.
-     */
-    String value() default "";
-}
+public @interface Singleton {}

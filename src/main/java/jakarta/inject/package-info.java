@@ -150,6 +150,6 @@
  * some definition, can be an injector, but this package specification aims to
  * minimize restrictions on injector implementations.
  *
- * @see javax.inject.Inject @Inject
+ * @see jakarta.inject.Inject @Inject
  */
-package javax.inject;
+package jakarta.inject;
