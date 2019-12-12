@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package javax.inject;
+package jakarta.inject;
 
 /**
  * Provides instances of {@code T}. Typically implemented by an injector. For

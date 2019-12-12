@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package javax.inject;
+package jakarta.inject;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
@@ -180,8 +180,8 @@ import static java.lang.annotation.ElementType.FIELD;
  * one of the dependencies (using {@linkplain Singleton singleton scope}, for
  * example) may also enable a valid circular relationship.
  *
- * @see javax.inject.Qualifier @Qualifier
- * @see javax.inject.Provider
+ * @see jakarta.inject.Qualifier @Qualifier
+ * @see jakarta.inject.Provider
  */
 @Target({ METHOD, CONSTRUCTOR, FIELD })
 @Retention(RUNTIME)
