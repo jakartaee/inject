@@ -77,6 +77,17 @@
   </properties>
 
   <build>
+    <resources>
+      <resource>
+        <directory>${project.basedir}</directory>
+        <includes>
+          <include>LICENSE.txt</include>
+          <include>NOTICE.md</include>
+        </includes>
+        <targetPath>META-INF</targetPath>
+      </resource>
+    </resources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -115,6 +126,34 @@ Use is subject to <a href="{@docRoot}/doc-files/speclicense.html" target="_top">
             <id>attach-javadocs</id>
             <goals>
               <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestFile>target/classes/META-INF/MANIFEST.MF</manifestFile>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>4.2.1</version>
+        <configuration>
+          <instructions>
+            <Implementation-Version>${spec_version}</Implementation-Version>
+          </instructions>
+        </configuration>
+        <executions>
+          <execution>
+            <id>osgi-manifest</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>manifest</goal>
             </goals>
           </execution>
         </executions>
