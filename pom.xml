@@ -95,7 +95,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>jakarta.inject</Automatic-Module-Name>
+              <Automatic-Module-Name>java.inject</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
