@@ -11,7 +11,7 @@
   <artifactId>jakarta.inject-api</artifactId>
   <packaging>jar</packaging>
   <name>Jakarta Dependency Injection</name>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>2.0.1-SNAPSHOT</version>
   <description>Jakarta Dependency Injection</description>
   <url>https://github.com/eclipse-ee4j/injection-api</url>
   <licenses>
@@ -74,6 +74,8 @@
   <properties>
     <packages.export>jakarta.inject.*</packages.export>
     <spec_version>2.0</spec_version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <build>
