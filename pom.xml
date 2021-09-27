@@ -74,8 +74,7 @@
   <properties>
     <packages.export>jakarta.inject.*</packages.export>
     <spec_version>2.0</spec_version>
-    <maven.compiler.source>9</maven.compiler.source>
-    <maven.compiler.target>9</maven.compiler.target>
+    <maven.compiler.release>9</maven.compiler.release>
   </properties>
 
   <build>
@@ -91,6 +90,11 @@
     </resources>
 
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
