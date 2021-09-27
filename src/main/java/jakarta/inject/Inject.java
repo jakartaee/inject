@@ -36,24 +36,24 @@ import static java.lang.annotation.ElementType.FIELD;
  * zero or more dependencies as arguments. {@code @Inject} can apply to at most
  * one constructor per class.
  *
- * <blockquote><tt>@Inject
+ * <blockquote><code>@Inject
  *       <i>ConstructorModifiers<sub>opt</sub></i>
  *       <i>SimpleTypeName</i>(<i>FormalParameterList<sub>opt</sub></i>)
  *       <i>Throws<sub>opt</sub></i>
- *       <i>ConstructorBody</i></tt>
+ *       <i>ConstructorBody</i></code>
  *       </blockquote>
  *
  * <p>{@code @Inject} is optional for public, no-argument constructors when no
  * other constructors are present. This enables injectors to invoke default
  * constructors.
  *
- * <blockquote><tt>
+ * <blockquote><code>
  *       {@literal @}Inject<sub><i>opt</i></sub>
  *       <i>Annotations<sub>opt</sub></i>
  *       public
  *       <i>SimpleTypeName</i>()
  *       <i>Throws<sub>opt</sub></i>
- *       <i>ConstructorBody</i></tt>
+ *       <i>ConstructorBody</i></code>
  * </blockquote>
 
  * <p>Injectable fields:
@@ -62,10 +62,10 @@ import static java.lang.annotation.ElementType.FIELD;
  *   <li>are not final.
  *   <li>may have any otherwise valid name.</li></ul>
  *
- * <blockquote><tt>@Inject
+ * <blockquote><code>@Inject
  *       <i>FieldModifiers<sub>opt</sub></i>
  *       <i>Type</i>
- *       <i>VariableDeclarators</i>;</tt>
+ *       <i>VariableDeclarators</i>;</code>
  * </blockquote>
  *
  * <p>Injectable methods:
@@ -77,12 +77,12 @@ import static java.lang.annotation.ElementType.FIELD;
  *   <li>may have any otherwise valid name.</li>
  *   <li>accept zero or more dependencies as arguments.</li></ul>
  *
- * <blockquote><tt>@Inject
+ * <blockquote><code>@Inject
  *       <i>MethodModifiers<sub>opt</sub></i>
  *       <i>ResultType</i>
  *       <i>Identifier</i>(<i>FormalParameterList<sub>opt</sub></i>)
  *       <i>Throws<sub>opt</sub></i>
- *       <i>MethodBody</i></tt>
+ *       <i>MethodBody</i></code>
  * </blockquote>
  *
  * <p>The injector ignores the result of an injected method, but
@@ -111,7 +111,7 @@ import static java.lang.annotation.ElementType.FIELD;
  *
  * <p>Injection of members annotated with {@code @Inject} is required. While an
  * injectable member may use any accessibility modifier (including
- * <tt>private</tt>), platform or injector limitations (like security
+ * <code>private</code>), platform or injector limitations (like security
  * restrictions or lack of reflection support) might preclude injection
  * of non-public members.
  *
