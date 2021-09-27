@@ -74,7 +74,7 @@
   <properties>
     <packages.export>jakarta.inject.*</packages.export>
     <spec_version>2.0</spec_version>
-    <maven.compiler.release>9</maven.compiler.release>
+    <maven.compiler.release>11</maven.compiler.release>
   </properties>
 
   <build>
