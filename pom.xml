@@ -93,17 +93,6 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifestEntries>
-              <Automatic-Module-Name>jakarta.inject</Automatic-Module-Name>
-            </manifestEntries>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
       <plugin>
@@ -160,6 +149,26 @@ Use is subject to <a href="{@docRoot}/doc-files/speclicense.html" target="_top">
                   </execution>
               </executions>
           </plugin>
+      <plugin>
+        <groupId>org.moditect</groupId>
+        <artifactId>moditect-maven-plugin</artifactId>
+        <version>1.0.0.RC1</version>
+        <executions>
+          <execution>
+            <id>add-module-infos</id>
+            <phase>package</phase>
+            <goals>
+              <goal>add-module-info</goal>
+            </goals>
+            <configuration>
+              <jvmVersion>9</jvmVersion>
+              <module>
+                <moduleInfoFile>src/main/java9/module-info.java</moduleInfoFile>
+              </module>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
