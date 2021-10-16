@@ -74,6 +74,8 @@
   <properties>
     <packages.export>javax.inject.*</packages.export>
     <spec_version>1.1</spec_version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <build>
@@ -91,24 +93,11 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifestEntries>
-              <Automatic-Module-Name>java.inject</Automatic-Module-Name>
-            </manifestEntries>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.1</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.2.0</version>
         <configuration>
           <docfilessubdirs>true</docfilessubdirs>
           <description>Jakarta Dependency Injection API</description>
@@ -118,7 +107,7 @@
           </header>
           <bottom><![CDATA[
 Comments to: <a href="mailto:cdi-dev@eclipse.org">cdi-dev@eclipse.org</a>.<br>
-Copyright &#169; 2019 Eclipse Foundation.<br>
+Copyright &#169; 2018,2020 Eclipse Foundation.<br>
 Use is subject to <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
           </bottom>
         </configuration>
@@ -133,31 +122,51 @@ Use is subject to <a href="{@docRoot}/doc-files/speclicense.html" target="_top">
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.0</version>
-        <configuration>
-          <archive>
-            <manifestFile>target/classes/META-INF/MANIFEST.MF</manifestFile>
-          </archive>
-        </configuration>
+          <configuration>
+              <archive>
+                  <manifestFile>target/classes/META-INF/MANIFEST.MF</manifestFile>
+              </archive>
+          </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>4.2.1</version>
-        <configuration>
-          <instructions>
-            <Implementation-Version>${spec_version}</Implementation-Version>
-          </instructions>
-        </configuration>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <version>4.2.1</version>
+              <configuration>
+                    <instructions>
+                        <Implementation-Version>${spec_version}</Implementation-Version>
+                    </instructions>
+                </configuration>
+              <executions>
+                  <execution>
+                      <id>osgi-manifest</id>
+                      <phase>process-classes</phase>
+                      <goals>
+                          <goal>manifest</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+      <plugin>
+        <groupId>org.moditect</groupId>
+        <artifactId>moditect-maven-plugin</artifactId>
+        <version>1.0.0.RC1</version>
         <executions>
           <execution>
-            <id>osgi-manifest</id>
-            <phase>process-classes</phase>
+            <id>add-module-infos</id>
+            <phase>package</phase>
             <goals>
-              <goal>manifest</goal>
+              <goal>add-module-info</goal>
             </goals>
+            <configuration>
+              <jvmVersion>9</jvmVersion>
+              <module>
+                <moduleInfoFile>src/main/java9/module-info.java</moduleInfoFile>
+              </module>
+            </configuration>
           </execution>
         </executions>
       </plugin>
