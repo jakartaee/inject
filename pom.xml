@@ -11,7 +11,7 @@
   <artifactId>jakarta.inject-api</artifactId>
   <packaging>jar</packaging>
   <name>Jakarta Dependency Injection</name>
-  <version>1.0.4</version>
+  <version>1.0.5-SNAPSHOT</version>
   <description>Jakarta Dependency Injection</description>
   <url>https://github.com/eclipse-ee4j/injection-api</url>
   <licenses>
@@ -25,7 +25,7 @@
     <connection>scm:git:ssh://git@github.com/eclipse-ee4j/injection-api.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/eclipse-ee4j/injection-api.git</developerConnection>
     <url>https://github.com/eclipse-ee4j/injection-api</url>
-    <tag>1.0.4</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <developers>
