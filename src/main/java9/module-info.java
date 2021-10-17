@@ -1,3 +1,3 @@
-module javax.inject {
+module java.inject {
     exports javax.inject;
 }
