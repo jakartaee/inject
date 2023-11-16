@@ -81,7 +81,7 @@
  * or else suffer the consequences. If a programmer initially elects to use a
  * constructor but later decides that more flexibility is required, the
  * programmer must replace every call to the constructor. If the programmer
- * errs on the side of caution and write factories up front, it may result in
+ * errs on the side of caution and writes factories up front, it may result in
  * a lot of unnecessary boilerplate code, adding noise, complexity, and
  * error-proneness.
  *
@@ -132,7 +132,7 @@
  * product of the number of unit tests and the number of dependencies.
  *
  * <p><b>This package provides dependency injection annotations that enable
- * portable classes</b>, but it leaves external dependency configuration up to
+ * portable classes</b>, But it leaves external dependency configuration up to
  * the injector implementation. Programmers annotate constructors, methods,
  * and fields to advertise their injectability (constructor injection is
  * demonstrated in the examples above). A dependency injector identifies a
@@ -146,7 +146,7 @@
  * or even plain Java code. An injector could rely on reflection or code
  * generation. An injector that uses compile-time code generation may not even
  * have its own run time representation. Other injectors may not be able to
- * generate code at all, neither at compile nor run time. A "container", for
+ * generate code at all, neither at compilation nor runtime. A "container", for
  * some definition, can be an injector, but this package specification aims to
  * minimize restrictions on injector implementations.
  *
