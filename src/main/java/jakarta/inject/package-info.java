@@ -81,7 +81,7 @@
  * or else suffer the consequences. If a programmer initially elects to use a
  * constructor but later decides that more flexibility is required, the
  * programmer must replace every call to the constructor. If the programmer
- * errs on the side of caution and write factories up front, it may result in
+ * errs on the side of caution and writes factories up front, it may result in
  * a lot of unnecessary boilerplate code, adding noise, complexity, and
  * error-proneness.
  *
